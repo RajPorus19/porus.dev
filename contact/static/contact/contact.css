@@ -1,0 +1,185 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap");
+
+body, html{
+  height:100%;
+  margin:0;
+  font-size:16px;
+  font-family: 'Source Code Pro', sans-serif;
+  font-weight:400;
+  line-height:1.8em;
+  color:#666;
+  max-width: 100%;
+  position: relative;
+  background-position:center;
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-attachment:fixed;
+  background-image:url('../img/image1.jpg');
+  min-height:100%;
+
+}
+
+
+
+main{
+  display: flex;
+  flex-direction: row;
+}
+
+
+  .ptext{
+    font-size:40px;
+    position: relative;
+    top:30%;
+    width:1000px;
+    text-align:center;
+    color:#000;
+    letter-spacing:2px;
+    line-height:2em;
+    opacity: 0.8;
+    display: flex;
+    justify-content: center;
+  
+  }
+  .border {
+    align-items: center;
+    text-align: center;
+    align-self: center;
+    align-content: center;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 100px;
+  }
+  
+  .ptext .border{
+    background-color:#111;
+    color:#fff;
+    padding:20px;
+  }
+
+  .contactForm{
+    margin-top: 40px;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+  }
+
+.contactForm input,textarea,label{
+  margin-top: 10px;
+  font-size: 35px;
+  border-style: none;
+
+}
+
+.contactForm input,textarea{
+  color: white;
+  background-color: #353535;
+
+}
+*:focus {
+  outline-color: #8DB255 ;
+}
+.contactForm label{
+  margin-right: auto;
+}
+
+.sendButton{
+  height: 50px;
+  width: 200px;
+  font-size: 30px;
+  font-weight: 600;
+  background-color: transparent;
+  align-self: center;
+  margin-top: 50px;
+  border-radius: 25px;
+  border-style: none;
+  color:#E68364;
+
+}
+.sendButton i{
+  color:  #8DB255;
+}
+
+.successMessage{
+  color:  #8DB255;
+}
+
+.mainContact{
+  width: auto;
+  margin-top: 300px;
+  display: flex;
+  justify-content: center;
+}
+main a{
+  display: flex;
+  flex-direction: row;
+  transition: color 2s, opacity 2s;
+}
+main a i{
+  margin-top: 86px;
+  margin-right: 20px;
+}
+main a h6 {
+  color: white;
+  transition: color 2s, opacity 2s;
+}
+a:hover i{
+  color:#8DB255;
+}
+a:hover h6{
+  color:#E68364;
+}
+
+@media(max-width:1000px){
+
+    .ptext{
+      font-size:20px;
+    }
+
+    .contactForm {
+      width: 400px;
+    }
+
+    .contactForm input,textarea,label{
+
+      font-size: 16px;
+    
+    }
+
+    .sendButton{
+      font-size: 25px;
+    }
+    
+
+  }
+
+  @media(max-width:700px){
+
+    .ptext{
+      font-size:16px;
+      width: auto;
+    }
+    .contactForm {
+      width: 300px;
+    }
+    .contactForm input,textarea{
+
+      font-size: 12px;
+    
+    }
+    
+    .sendButton{
+      font-size: 20px;
+    }
+
+    .mainContact{
+      margin-top: 100px;
+      flex-direction: column-reverse;
+    }
+    main a i{
+      margin-top: 50px;
+    }
+  }

@@ -1,0 +1,63 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'contact/contact.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+
+
+    <title>Contact</title>
+</head>
+<body>
+
+
+    {% include "shared/navbar.html" %}
+
+  <main class="mainContact">
+    <div class="ptext">
+      <span class="border" data-aos="flip-right">
+        <h4 data-aos="fade-in" class="greetingTxt">Do not hesitate to contact me</h4>
+        <form class="contactForm" action="" method="post">
+        {% csrf_token %}
+        {{ form }}
+        <button type="submit" class="sendButton">  
+          <i class="fa fa-comments" aria-hidden="true"></i>
+          Send
+        </button>  
+        <h4 data-aos="zoom-in" class="successMessage">{{message}}</h4>
+      </form>
+    </span>
+    </div>
+    <div class="ptext">
+      <span class="border" data-aos="flip-left">
+        <a  target="_blank" rel="noopener noreferrer" href="mailto:raj.porus.hiruthayaraj@gmail.com">
+          <i class="fa fa-envelope" aria-hidden="true"></i>
+          <h6 data-aos="fade-in" class="greetingTxt">Send me an email</h6>
+
+        </a>
+        <a  target="_blank" rel="noopener noreferrer" href="https://github.com/RajPorus19">
+          <i class="fa fa-github" aria-hidden="true"></i>
+          <h6 data-aos="fade-in" class="greetingTxt">Take a look at my Github</h6>
+          
+        </a>
+        <a  target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/raj-porus-hiruthayaraj-923818196/">
+          <i class="fa fa-linkedin" aria-hidden="true"></i>
+          <h6 data-aos="fade-in" class="greetingTxt">Let's connect on Linkedin</h6>
+          
+        </a>
+        <a  target="_blank" rel="noopener noreferrer" href="{% url 'blogrss' %}">
+          <i class="fa fa-rss" aria-hidden="true"></i>
+          <h6 data-aos="fade-in" class="greetingTxt">Stay up to date on all my posts !</h6>
+        </a>
+        
+      </span>
+    </div>
+  </main>
+</body>
+</html>

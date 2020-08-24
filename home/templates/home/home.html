@@ -1,0 +1,183 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Porus</title>
+
+  <link rel="stylesheet" href="{% static 'home/home.css' %}">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+ 
+  <div class="pimg1">
+    {% include "shared/navbar.html" %}
+    <div class="ptext">
+      <span class="border mainText" data-aos="fade-in">
+          <h2 class="consoleSign">></h2>
+          <span>I am a </span>
+          <div class="txt-space"></div>
+          <span class="txt-type" data-wait="3000" data-words='["web developer","mobile developer","linux user","self-taught","passionate coder"]'></span>
+          <div class="bar"></div>
+        </div>
+        </span>
+        <div class="ptext border scroll">
+          
+          <h1>Scroll down</h1>
+          <i class="fa fa-arrow-down" aria-hidden="true"></i>
+        </div>
+    </div>
+  </div>
+
+  <section class="section section-light" >
+    <h2 data-aos="zoom-in">Web developpement</h2>
+    <p data-aos="fade-in">
+      I have a good knowledge of coding on the <a style="color: #8DB255; font-size: 20px">front-end</a>
+       and the <a style="color: #E68364; font-size: 20px;" >back-end</a>, I prefer to do the front-end from scratch
+      although I know how to use front-end libraries like bootstrap.
+      For the website you are currently on I used the web framework django and SQLite3 as the query language.
+    </p>
+  </section>
+
+  <div class="pimg2">
+    <div id="webPtext" class="ptext">
+      <span id="webDev" class="border" data-aos="zoom-in" >
+        <div class="webDevLines">
+          <i data-aos-delay="250" data-aos="slide-right" id="html" class="fa fa-html5"></i>
+          <p data-aos-delay="250" data-aos="slide-left">HTML</p>
+        </div>
+        <div style="width: 50px; height: 0px;"></div>
+        <div id="cssLine" class="webDevLines">
+          <i data-aos-delay="500" data-aos="slide-left" id="css" class="fa fa-css3"></i>
+          <p data-aos-delay="500" data-aos="slide-right">CSS</p>
+        </div>
+        <div style="width: 50px; height: 0px;"></div>
+        <div class="webDevLines">
+        <img data-aos-delay="750" data-aos="slide-right" class="svg" src="{% static 'img/file-formats.svg' %}" alt="js" srcset="{% static 'img/file-formats.svg' %}">
+
+          <p data-aos-delay="750" data-aos="slide-left">Javascript</p>
+        </div>
+
+      </span>
+    </div>
+
+    <div id="webPtext2" class="ptext">
+      <span id="webDev" class="border" data-aos="zoom-in" >
+        <div class="webDevLines">
+          <p data-aos-delay="250" data-aos="slide-left">Django, Flask</p>
+        </div>
+        <div style="width: 50px; height: 0px;"></div>
+        <div id="cssLine" class="webDevLines">
+          <p data-aos-delay="500" data-aos="slide-right">React</p>
+        </div>
+        <div style="width: 50px; height: 0px;"></div>
+        <div class="webDevLines">
+          <p data-aos-delay="750" data-aos="slide-left">Laravel</p>
+        </div>
+
+      </span>
+    </div>
+
+
+  </div>
+
+  <section class="section section-dark"  >
+    <h2 data-aos="zoom-in">Mobile developpement</h2>
+    <p data-aos="fade-in">
+      For the mobile app side of things I've first started coding native android app using <a style="color: #8DB255; font-size: 20px">Java and the Android SDK</a>.
+      And recently I picked up <a style="color: #E68364; font-size: 20px;" >Flutter</a>, made by Google to create cross-platform mobile apps written in <a style="color: #E68364; font-size: 20px;" >Dart</a>.
+    </p>
+  </section>
+
+  <div class="pimg3">
+
+    <div id="webPtext" class="ptext">
+      <span id="mobDev" class="border" data-aos="zoom-in" >
+        <div class="webDevLines">
+          <i data-aos-delay="500" data-aos="slide-left" id="css" class="fa fa-android"></i>
+          <p data-aos-delay="250" data-aos="slide-left">Java, Android SDK</p>
+        </div>
+
+      </span>
+    </div>
+    <div style="height: 200px;"></div>
+    <div id="webPtext2" class="ptext">
+      <span id="mobDev" class="border" data-aos="zoom-in" >
+        <div class="webDevLines">
+          <i data-aos-delay="500" data-aos="slide-left" id="css" class="fa fa-apple"></i>
+          <i data-aos-delay="500" data-aos="slide-left" id="css" class="fa fa-android"></i>
+          <p data-aos-delay="250" data-aos="slide-left">Flutter, Dart</p>
+        </div>
+
+
+      </span>
+    </div>
+
+  </div>
+
+  <section class="section section-light" >
+    <h2 data-aos="zoom-in">Database</h2>
+    <p data-aos="fade-in">
+      I've came to use both <a style="color: #8DB255; font-size: 20px;" >SQL databases</a> and <a style="color: #E68364; font-size: 20px;" >NOSQL databases</a>, I used <a style="color: #8DB255; font-size: 20px;" >PostgressSQL</a> in my Django or Flask projects, 
+      and as for the mobile app projects on Flutter, I've used the <a style="color: #E68364; font-size: 20px;" >Cloud Firestore</a> which works
+      very well with Flutter.
+    </p>
+  </section>
+
+  <div class="pimg4">
+    <div class="ptext" style="top:30%">
+          <span id="mobDev" class="border" data-aos="zoom-in" >
+            <div class="webDevLines">
+              <i data-aos-delay="500" data-aos="zoom-in" id="css" class="fa fa-database"></i>
+              <p data-aos-delay="250" data-aos="slide-right">MySQL, PostgressSQL</p>
+            </div>
+    
+          </span>
+    </div>
+    <div id="webPtext2" class="ptext" style="top:60%">
+      <span id="mobDev" class="border" data-aos="zoom-in" >
+        <div class="webDevLines">
+          <p data-aos-delay="250" data-aos="slide-left" style="margin-right: 20px;">MongoDB, Cloud Firestore</p>
+          <i data-aos-delay="500" data-aos="zoom-in" id="css" class="fa fa-database"></i>
+        </div>
+
+
+      </span>
+    </div>
+
+  </div>
+
+  </div>
+  <section class="section section-dark" style="font-size: 35px;">
+    <h2 data-aos="zoom-in">Github</h2>
+    <p data-aos="fade-in">
+      Take a look at the projects I am working on, on my Github !
+    </p>
+    <i data-aos-delay="500" data-aos="zoom-in" id="css" class="fa fa-github"></i>
+    <a target="_blank" rel="noopener noreferrer" href="https://www.github.com/Rajporus19">github.com/RajPorus19</a>
+  </section>
+  <div class="pimg5">
+    {% include "shared/navbar.html" %}
+    <div class="ptext" style="top:50%">
+      <span class="border" data-aos="zoom-in">
+      <a style="color: #8DB255; margin-right: 20px;">  Raj Porus </a>   <a style="color:#E68364;"> Hiruthayaraj </a>
+      </span>
+    </div>
+  </div>
+  <script src="{% static 'home/typing.js' %}"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+        offset: 0, // offset (in px) from the original trigger point
+        delay: 0, // values from 0 to 3000, with step 50ms
+        duration: 1000 // values from 0 to 3000, with step 50ms
+      });
+  </script>
+
+
+
+</body>
+</html>

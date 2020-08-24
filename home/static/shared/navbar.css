@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap");
+*{
+    font-family: 'Source Code Pro', sans-serif;
+}
+a, u {
+    text-decoration: none;
+}
+  
+a {
+    text-decoration: none !important;
+    color: white;
+}
+  
+.navbar{
+    padding-top: 40px;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.navlinks{
+    border-radius: 25px;
+    font-size:35px;
+    background-color: black;
+    padding: 10px;
+    opacity: 0.7;
+    transition: opacity 0.5s, color 0.5s;
+    display: flex;
+    flex-direction: row;
+}
+
+.navtext{
+    padding-left: 20px;
+  }
+  
+.navlinks:hover{
+    opacity: 1;
+    color:  #E68364;
+}
+i{
+    transition: opacity 0.5s, color 0.5s;
+}
+.navlinks:hover i{
+    color:  #8DB255;
+}
+
+.selected .navlinks i{
+    color:  #8DB255;
+}
+
+.selected .navlinks{
+    opacity: 1;
+    color:  #E68364;
+}
+
+@media(max-width:700px){
+    .navtext{
+      display: none;
+    }
+}
+
+@media(max-width:900px){
+    *{
+        font-size: 18px;
+    }
+}
+  

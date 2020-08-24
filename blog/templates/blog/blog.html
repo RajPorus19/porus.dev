@@ -1,0 +1,57 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'blog/blog.css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+
+
+    <title>Blog</title>
+</head>
+<body>
+
+
+    {% include "shared/navbar.html" %}
+    <div class="searchBox" data-aos="zoom-in">
+    <form class="search" action="">
+      <input class="textInput" type="text" name="q">
+      <button type="submit" class="button">
+        <i class="fa fa-search" aria-hidden="true"></i>
+    </button>
+    </form>
+    
+  </div>
+    <div class="postList">
+    {% for post in posts %}
+    <div class="ptext">
+    <a href="{% url 'post-detail' post.id %}">
+
+      <span class="border" data-aos="fade-in">
+          <p class="title">{{ post.title }}</p>
+          <small class="date"> Posted on {{post.date_posted}}</small>
+      </span>
+    </a>
+    </div>
+    {% endfor %}
+    {% if noPost or arg %}
+    <div class="resultBox" data-aos="flip-up">
+      <div class="searchTextBox">
+      {% if noPost %}
+      <a href="{% url 'blog-home' %}"><h1 class="searchText" >No posts found for : {{ arg }}</h1></a>
+      {% endif %}
+
+      {% if arg and noPost == False %}
+      <h1 class="searchText" >Posts found for : {{ arg }}</h1>
+      {% endif %}
+    {% endif %}
+    </div>
+  </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'shared/navbar.css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+<div class="navbar" data-aos="slide-down">
+    <a id="home" href="{% url 'home' %}"><div class="navlinks"> <i class="fa fa-home" aria-hidden="true"></i> <div class="navtext"> Home</div></div></a>
+    <a id="blog" href="{% url 'blog-home' %}"><div class="navlinks"> <i class="fa fa-globe" aria-hidden="true"></i> <div class="navtext"> Blog</div></div></a>
+    <a id="contact" href="{% url 'contact' %}"><div class="navlinks"><i class="fa fa-comments" aria-hidden="true"></i> <div class="navtext"> Contact</div></div></a>
+    <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/user/Rajporus19"><div class="navlinks"> <i class="fa fa-youtube-play" aria-hidden="true"></i> <div class="navtext"> Youtube</div></div></a>
+    <a id="other" href="{% url 'other' %}"><div class="navlinks"> <i class="fa fa-ellipsis-h" aria-hidden="true"></i> <div class="navtext"> Other</div></div></a>
+</div>
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init({
+        offset: 0, // offset (in px) from the original trigger point
+        delay: 0, // values from 0 to 3000, with step 50ms
+        duration: 1000 // values from 0 to 3000, with step 50ms
+      });
+
+      var url = "{{request.get_full_path}}";
+
+      var home = document.getElementById("home");
+      var blog = document.getElementById("blog");
+      var contact = document.getElementById("contact");
+      var other = document.getElementById("other");
+
+      switch (url) {
+          case "/":
+              home.classList.add("selected");
+              break;
+      
+          case "/blog/":
+              blog.classList.add("selected");
+              break;
+      
+          case "/contact/":
+              contact.classList.add("selected");
+              break;
+            
+          case "/other/":
+              other.classList.add("selected");
+              break;
+      }
+  </script>
+
